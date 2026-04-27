@@ -4,74 +4,121 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
+  /* Fundo: Branco com toque de verde muito sutil */
+  --background: oklch(0.98 0.01 142);
+  --foreground: oklch(0.12 0.02 142);
+  
+  /* Cards: Branco puro com borda verde sutil */
+  --card: oklch(0.99 0.005 142);
+  --card-foreground: oklch(0.12 0.02 142);
+  
+  /* Popover */
+  --popover: oklch(0.99 0.005 142);
+  --popover-foreground: oklch(0.12 0.02 142);
+  
+  /* Primary: Verde Metálico Vibrante */
+  --primary: oklch(0.45 0.22 142);
+  --primary-foreground: oklch(0.98 0.01 142);
+  
+  /* Secondary: Verde Claro Metálico */
+  --secondary: oklch(0.88 0.08 142);
+  --secondary-foreground: oklch(0.25 0.08 142);
+  
+  /* Muted */
+  --muted: oklch(0.92 0.02 142);
+  --muted-foreground: oklch(0.55 0.05 142);
+  
+  /* Accent: Verde Metálico Brilhante */
+  --accent: oklch(0.52 0.25 142);
+  --accent-foreground: oklch(0.98 0.01 142);
+  
+  /* Destructive: Vermelho com toque de energia */
+  --destructive: oklch(0.55 0.28 25);
+  --destructive-foreground: oklch(0.98 0.01 142);
+  
+  /* Border: Verde muito sutil */
+  --border: oklch(0.88 0.04 142);
+  --input: oklch(0.92 0.02 142);
+  
+  /* Ring: Verde Metálico para foco */
+  --ring: oklch(0.50 0.20 142);
+  
+  /* Charts: Paleta de verdes metálicos */
+  --chart-1: oklch(0.50 0.22 142);
+  --chart-2: oklch(0.60 0.18 142);
+  --chart-3: oklch(0.45 0.20 142);
+  --chart-4: oklch(0.55 0.25 142);
+  --chart-5: oklch(0.65 0.15 142);
+  
   --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  
+  /* Sidebar: Verde Metálico Escuro */
+  --sidebar: oklch(0.22 0.08 142);
+  --sidebar-foreground: oklch(0.95 0.02 142);
+  --sidebar-primary: oklch(0.55 0.25 142);
+  --sidebar-primary-foreground: oklch(0.98 0.01 142);
+  --sidebar-accent: oklch(0.35 0.15 142);
+  --sidebar-accent-foreground: oklch(0.95 0.02 142);
+  --sidebar-border: oklch(0.30 0.10 142);
+  --sidebar-ring: oklch(0.55 0.25 142);
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.145 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.145 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.269 0 0);
-  --input: oklch(0.269 0 0);
-  --ring: oklch(0.439 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(0.269 0 0);
-  --sidebar-ring: oklch(0.439 0 0);
+  /* Fundo Escuro: Preto com toque de verde metálico */
+  --background: oklch(0.10 0.02 142);
+  --foreground: oklch(0.95 0.02 142);
+  
+  /* Cards: Cinza muito escuro com verde */
+  --card: oklch(0.15 0.03 142);
+  --card-foreground: oklch(0.92 0.02 142);
+  
+  /* Popover */
+  --popover: oklch(0.15 0.03 142);
+  --popover-foreground: oklch(0.92 0.02 142);
+  
+  /* Primary: Verde Metálico Brilhante */
+  --primary: oklch(0.60 0.28 142);
+  --primary-foreground: oklch(0.10 0.02 142);
+  
+  /* Secondary: Verde Escuro */
+  --secondary: oklch(0.25 0.08 142);
+  --secondary-foreground: oklch(0.92 0.02 142);
+  
+  /* Muted */
+  --muted: oklch(0.30 0.05 142);
+  --muted-foreground: oklch(0.70 0.05 142);
+  
+  /* Accent: Verde Metálico Vibrante */
+  --accent: oklch(0.65 0.30 142);
+  --accent-foreground: oklch(0.10 0.02 142);
+  
+  /* Destructive: Vermelho Vibrante */
+  --destructive: oklch(0.60 0.30 25);
+  --destructive-foreground: oklch(0.95 0.02 142);
+  
+  /* Border: Verde Escuro */
+  --border: oklch(0.25 0.06 142);
+  --input: oklch(0.20 0.04 142);
+  
+  /* Ring: Verde Metálico Brilhante */
+  --ring: oklch(0.65 0.30 142);
+  
+  /* Charts: Paleta de verdes metálicos brilhantes */
+  --chart-1: oklch(0.65 0.30 142);
+  --chart-2: oklch(0.60 0.28 142);
+  --chart-3: oklch(0.55 0.25 142);
+  --chart-4: oklch(0.70 0.32 142);
+  --chart-5: oklch(0.58 0.26 142);
+  
+  /* Sidebar: Verde Metálico Muito Escuro */
+  --sidebar: oklch(0.12 0.03 142);
+  --sidebar-foreground: oklch(0.92 0.02 142);
+  --sidebar-primary: oklch(0.65 0.30 142);
+  --sidebar-primary-foreground: oklch(0.10 0.02 142);
+  --sidebar-accent: oklch(0.50 0.20 142);
+  --sidebar-accent-foreground: oklch(0.92 0.02 142);
+  --sidebar-border: oklch(0.20 0.05 142);
+  --sidebar-ring: oklch(0.65 0.30 142);
 }
 
 @theme inline {
@@ -119,7 +166,90 @@
   * {
     @apply border-border outline-ring/50;
   }
+  
   body {
     @apply bg-background text-foreground;
+    background-image: 
+      radial-gradient(circle at 20% 50%, rgba(76, 175, 80, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(76, 175, 80, 0.03) 0%, transparent 50%);
   }
+  
+  /* Efeitos de vidro/glassmorphism para cards */
+  .glass-effect {
+    @apply backdrop-blur-md bg-white/80 dark:bg-slate-900/80;
+    border: 1px solid rgba(76, 175, 80, 0.2);
+  }
+  
+  /* Efeito de brilho metálico */
+  .metallic-shine {
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0.05) 100%);
+  }
+  
+  /* Animação de pulso verde */
+  @keyframes pulse-green {
+    0%, 100% {
+      box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
+    }
+    50% {
+      box-shadow: 0 0 0 10px rgba(76, 175, 80, 0);
+    }
+  }
+  
+  .pulse-green {
+    animation: pulse-green 2s infinite;
+  }
+  
+  /* Animação de glow */
+  @keyframes glow {
+    0%, 100% {
+      text-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+    }
+    50% {
+      text-shadow: 0 0 20px rgba(76, 175, 80, 0.8);
+    }
+  }
+  
+  .glow-text {
+    animation: glow 3s ease-in-out infinite;
+  }
+  
+  /* Gradient verde metálico */
+  .gradient-green-metallic {
+    background: linear-gradient(135deg, #2d7a4a 0%, #4caf50 50%, #66bb6a 100%);
+  }
+  
+  /* Efeito de borda animada */
+  @keyframes border-glow {
+    0%, 100% {
+      border-color: rgba(76, 175, 80, 0.3);
+      box-shadow: 0 0 10px rgba(76, 175, 80, 0.2);
+    }
+    50% {
+      border-color: rgba(76, 175, 80, 0.8);
+      box-shadow: 0 0 20px rgba(76, 175, 80, 0.5);
+    }
+  }
+  
+  .border-glow {
+    animation: border-glow 3s ease-in-out infinite;
+  }
+}
+
+/* Scrollbar customizado com tema verde */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
 }

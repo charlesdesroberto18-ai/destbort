@@ -173,39 +173,40 @@ export default function Dashboard() {
             <div className="grid gap-6 lg:grid-cols-3">
               {/* Coluna da Esquerda: Saldo e Notificações */}
               <div className="lg:col-span-2 space-y-6">
-                {/* Saldo Principal Estilizado */}
-                <Card className="overflow-hidden border-none bg-gradient-to-br from-primary/10 via-primary/5 to-background shadow-md">
-                  <CardContent className="p-0">
-                    <div className="grid grid-cols-1 divide-y divide-border/50 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
-                      <div className="p-6">
-                        <div className="flex items-center gap-2 text-sm font-medium text-muted-foreground mb-1">
+                {/* Saldo Principal Estilizado com Efeito Metálico */}
+                <Card className="overflow-hidden border-none gradient-green-metallic shadow-2xl border-glow relative">
+                  <div className="absolute inset-0 metallic-shine pointer-events-none" />
+                  <CardContent className="p-0 relative z-10">
+                    <div className="grid grid-cols-1 divide-y divide-white/20 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+                      <div className="p-6 text-white">
+                        <div className="flex items-center gap-2 text-sm font-medium text-white/80 mb-1">
                           <Wallet className="h-4 w-4" /> Saldo Total
                         </div>
                         <div className={cn(
-                          "text-3xl font-bold tracking-tight",
-                          balance.total >= 0 ? "text-foreground" : "text-destructive"
+                          "text-3xl font-bold tracking-tight glow-text",
+                          balance.total >= 0 ? "text-white" : "text-red-300"
                         )}>
                           {formatCurrency(balance.total)}
                         </div>
                       </div>
-                      <div className="p-6">
-                        <div className="flex items-center gap-2 text-sm font-medium text-primary mb-1">
+                      <div className="p-6 text-white">
+                        <div className="flex items-center gap-2 text-sm font-medium text-white/80 mb-1">
                           <TrendingUp className="h-4 w-4" /> Entradas
                         </div>
-                        <div className="text-2xl font-bold text-foreground">
+                        <div className="text-2xl font-bold text-white">
                           {formatCurrency(balance.income)}
                         </div>
                         {balance.jobEarnings > 0 && (
-                          <p className="text-xs text-muted-foreground mt-1">
+                          <p className="text-xs text-white/70 mt-1">
                             +{formatCurrency(balance.jobEarnings)} de trabalhos
                           </p>
                         )}
                       </div>
-                      <div className="p-6">
-                        <div className="flex items-center gap-2 text-sm font-medium text-destructive mb-1">
+                      <div className="p-6 text-white">
+                        <div className="flex items-center gap-2 text-sm font-medium text-white/80 mb-1">
                           <TrendingDown className="h-4 w-4" /> Saídas
                         </div>
-                        <div className="text-2xl font-bold text-foreground">
+                        <div className="text-2xl font-bold text-white">
                           {formatCurrency(balance.expense)}
                         </div>
                       </div>
@@ -214,7 +215,7 @@ export default function Dashboard() {
                 </Card>
 
                 {/* Centro de Notificações / Alertas */}
-                <Card className="bg-card/50 backdrop-blur-md border-border shadow-sm">
+                <Card className="glass-effect shadow-lg border-glow">
                   <CardHeader className="pb-3 flex flex-row items-center justify-between">
                     <CardTitle className="text-lg font-semibold flex items-center gap-2">
                       <Bell className="h-5 w-5 text-primary" /> Central de Alertas
@@ -231,10 +232,10 @@ export default function Dashboard() {
                         <div
                           key={i}
                           className={cn(
-                            "group flex items-center justify-between gap-4 rounded-xl p-4 transition-all hover:scale-[1.01]",
+                            "group flex items-center justify-between gap-4 rounded-xl p-4 transition-all hover:scale-[1.01] border-glow",
                             alert.priority === "high"
-                              ? "bg-destructive/5 border border-destructive/10 text-destructive"
-                              : "bg-primary/5 border border-primary/10 text-primary"
+                              ? "bg-red-500/10 border border-red-500/30 text-red-600 dark:text-red-400"
+                              : "bg-primary/15 border border-primary/40 text-primary"
                           )}
                         >
                           <div className="flex items-center gap-3">
@@ -267,8 +268,8 @@ export default function Dashboard() {
 
                 {/* Grid de Atividades Próximas */}
                 <div className="grid gap-6 md:grid-cols-2">
-                  {/* Tarefas Prioritárias */}
-                  <Card className="bg-card border-border shadow-sm">
+                  {/* Tarefas Prioritarias */}
+                  <Card className="glass-effect shadow-lg border-primary/30 hover:border-primary/60 transition-all">
                     <CardHeader className="pb-2">
                       <CardTitle className="text-base font-semibold flex items-center gap-2">
                         <CheckSquare className="h-4 w-4 text-primary" /> Próximas Tarefas
@@ -299,7 +300,7 @@ export default function Dashboard() {
                   </Card>
 
                   {/* Saúde / Medicamentos */}
-                  <Card className="bg-card border-border shadow-sm">
+                  <Card className="glass-effect shadow-lg border-primary/30 hover:border-primary/60 transition-all">
                     <CardHeader className="pb-2">
                       <CardTitle className="text-base font-semibold flex items-center gap-2">
                         <Pill className="h-4 w-4 text-primary" /> Saúde & Bem-estar
@@ -336,8 +337,8 @@ export default function Dashboard() {
               {/* Coluna da Direita: Mini Calendário e Metas */}
               <div className="space-y-6">
                 {/* Mini Calendário Funcional */}
-                <Card className="bg-card border-border shadow-sm overflow-hidden">
-                  <CardHeader className="pb-2 bg-secondary/30">
+                <Card className="glass-effect shadow-lg overflow-hidden border-primary/30 hover:border-primary/60 transition-all">
+                  <CardHeader className="pb-2 bg-gradient-to-r from-primary/20 to-primary/10">
                     <CardTitle className="text-sm font-semibold flex items-center gap-2">
                       <CalendarIcon className="h-4 w-4 text-primary" /> Agenda Mensal
                     </CardTitle>
@@ -372,7 +373,7 @@ export default function Dashboard() {
                 </Card>
 
                 {/* Metas de Curto Prazo */}
-                <Card className="bg-card border-border shadow-sm">
+                <Card className="glass-effect shadow-lg border-primary/30 hover:border-primary/60 transition-all">
                   <CardHeader className="pb-2">
                     <CardTitle className="text-sm font-semibold flex items-center gap-2">
                       <Target className="h-4 w-4 text-primary" /> Suas Metas
@@ -388,9 +389,9 @@ export default function Dashboard() {
                               <span className="font-medium">{goal.title}</span>
                               <span className="text-muted-foreground">{Math.round(progress)}%</span>
                             </div>
-                            <div className="h-1.5 w-full rounded-full bg-secondary overflow-hidden">
+                            <div className="h-2 w-full rounded-full bg-secondary/50 overflow-hidden border border-primary/20">
                               <div 
-                                className="h-full bg-primary transition-all duration-500" 
+                                className="h-full bg-gradient-to-r from-primary to-accent transition-all duration-500 shadow-lg shadow-primary/50" 
                                 style={{ width: `${Math.min(progress, 100)}%` }}
                               />
                             </div>
